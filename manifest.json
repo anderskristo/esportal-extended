@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Esportal Extended",
+  "version": "0.1",
+  "author": "anderskristo",
+  "permissions": [ 
+    "*://*.esportal.com/*",
+    "storage"
+  ],
+  "browser_action": {
+    "default_popup": "src/page/index.html"
+  },
+  "content_scripts": [
+	  {
+      "matches": [
+        "*://*.esportal.com/*"
+      ],
+		  "js": ["jquery.min.js", "content.js"],
+      "run_at": "document_start"
+	  }
+	]
+}
